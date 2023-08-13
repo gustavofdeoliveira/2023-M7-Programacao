@@ -64,13 +64,13 @@ Para subir no docker hub, basta seguir os seguintes passos:
    ``docker images``
 6. Crie uma tag para a imagem com o comando:
    ``docker tag <id da imagem> <username>/<nome da imagem>``
-5. Após isso, basta dar um push na imagem com o comando:
+7. Após isso, basta dar um push na imagem com o comando:
    ``docker push <username>/<nome da imagem>``
 
 ### 6. Docker Hub
 
 Para acessa a imagem, acesse o docker hub:
-https://hub.docker.com/repository/docker/gustavofdeoliveira/curriculo-docker/general
+[https://hub.docker.com/repository/docker/gustavofdeoliveira/curriculo-docker/general](https://hub.docker.com/repository/docker/gustavofdeoliveira/curriculo-docker/general)
 
 Nota: Quando fui subir para o docker hub, a imagem não apareceu mas conseguia dar pull ou push na imagem
 
