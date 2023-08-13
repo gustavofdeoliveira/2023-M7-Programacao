@@ -5,8 +5,8 @@ Este projeto tem como objetivo colocar em pratica como construir um container Do
 ## Passos para Construir o Container Docker
 
 ### 1. Front-end do Currículo
-O front-end do currículo é composto por um arquivo HTML simples e um arquivo CSS do Bootstrap. O arquivo HTML contém o conteúdo do currículo e o arquivo CSS do Bootstrap fornece o estilo. O front-end do currículo é armazenado na pasta `frontend` do projeto.
 
+O front-end do currículo é composto por um arquivo HTML simples e um arquivo CSS do Bootstrap. O arquivo HTML contém o conteúdo do currículo e o arquivo CSS do Bootstrap fornece o estilo. O front-end do currículo é armazenado na pasta `frontend` do projeto.
 
 ### 2. Criando o Dockerfile
 
@@ -49,6 +49,34 @@ Abra um terminal na pasta raiz do projeto e execute o seguinte comando para cons
 * `-t curriculo-docker`: Isso atribui o nome "curriculo-docker" à imagem.
 
 Após a execução deste comando, o Docker executará as etapas definidas no Dockerfile para criar uma imagem que contém o seu currículo e as dependências do Node.js, se houver.
+
+### 5. Upload no Docker Hub
+
+Para subir no docker hub, basta seguir os seguintes passos:
+
+1. Criar o repositorio no docker hub
+2. Fazer login no docker pelo ser terminal com o comando:
+   ``docker login --username  <username>``
+3. Vai pedir para digitar a senha
+4. Build a imagem com o comando:
+   ``docker build -t <username>/<nome da imagem> .``
+5. Verificar se a imagem foi criada com o comando:
+   ``docker images``
+6. Crie uma tag para a imagem com o comando:
+   ``docker tag <id da imagem> <username>/<nome da imagem>``
+5. Após isso, basta dar um push na imagem com o comando:
+   ``docker push <username>/<nome da imagem>``
+
+### 6. Docker Hub
+
+Para acessa a imagem, acesse o docker hub:
+https://hub.docker.com/repository/docker/gustavofdeoliveira/curriculo-docker/general
+
+Nota: Quando fui subir para o docker hub, a imagem não apareceu mas conseguia dar pull ou push na imagem
+
+![1691961266654](image/README/1691961266654.png)
+
+![1691961295392](image/README/1691961295392.png)
 
 ## Conclusão
 

@@ -1,8 +1,8 @@
 # Use uma imagem base oficial do Node.js
-FROM node:14
+FROM node:18
 
 # Defina o diretório de trabalho no contêiner
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copie package.json e package-lock.json para o contêiner
 COPY package*.json ./
