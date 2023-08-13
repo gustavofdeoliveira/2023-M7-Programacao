@@ -1,0 +1,86 @@
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes virtuais (exemplos)
+venv/
+env/
+*.venv/
+*.env/
+.pyenv/
+
+# Arquivos de configuração do Python
+.pytest_cache/
+.coverage
+.tox/
+.idea/
+.vscode/
+
+# Logs e arquivos temporários
+*.log
+*.pot
+*.pyc
+__pycache__/
+*.swp
+*~
+
+# Dependências geradas
+dist/
+build/
+*.egg-info/
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de saída de testes e relatórios
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+nosy.ini
+*.coverage
+*.report
+
+# Dependências geradas
+node_modules/
+
+# Arquivos gerados pelo npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependências de desenvolvimento
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Logs e arquivos temporários
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Arquivos gerados ao construir o projeto
+dist/
+build/
+
+# Arquivos de configuração da IDE
+.vscode/
+.idea/
+
+# Cache e lixo
+.nyc_output/
+*.swp
+*~
+.DS_Store
+Thumbs.db

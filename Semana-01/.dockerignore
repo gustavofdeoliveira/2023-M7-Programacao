@@ -1,0 +1,28 @@
+# Arquivos gerados pelo Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-lock.yaml
+*.log
+
+# Dependências de desenvolvimento
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Arquivos gerados ao construir o projeto
+dist/
+build/
+
+# Cache e lixo
+.nyc_output/
+*.swp
+*~
+.DS_Store
+Thumbs.db
