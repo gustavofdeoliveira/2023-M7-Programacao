@@ -80,4 +80,4 @@ Nota: Quando fui subir para o docker hub, a imagem não apareceu mas conseguia d
 
 ## Conclusão
 
-Ao seguir os passos acima, você terá construído uma imagem Docker que encapsula seu currículo HTML/Bootstrap/Node.js. Essa abordagem permite que você compartilhe seu currículo de maneira consistente e reprodutível, independentemente das configurações do ambiente de execução. Certifique-se de personalizar o Dockerfile de acordo com as necessidades específicas do seu projeto.
+Ao seguir os passos acima, você terá construído uma imagem Docker que encapsula seu currículo HTML/Bootstrap/Node.js.
