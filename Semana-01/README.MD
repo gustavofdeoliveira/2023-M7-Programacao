@@ -57,7 +57,7 @@ Para subir no docker hub, basta seguir os seguintes passos:
 1. Criar o repositorio no docker hub
 2. Fazer login no docker pelo ser terminal com o comando:
    ``docker login --username  <username>``
-3. Vai pedir para digitar a senha
+3. Vai pedir para digitar a senha. Digite a senha e de enter.
 4. Build a imagem com o comando:
    ``docker build -t <username>/<nome da imagem> .``
 5. Verificar se a imagem foi criada com o comando:
@@ -66,6 +66,17 @@ Para subir no docker hub, basta seguir os seguintes passos:
    ``docker tag <id da imagem> <username>/<nome da imagem>``
 7. Após isso, basta dar um push na imagem com o comando:
    ``docker push <username>/<nome da imagem>``
+
+### 7. Rodar a imagem
+
+1. Faça o download da imagem pelo comando:
+   `` docker pull gustavofdeoliveira/curriculo-docker:latest``
+2. Build a imagem rodando o comando:
+   ``docker build -t curriculo-docker . ``
+3. Rode a imagem com o comando:
+   ``docker run -p 80:80 curriculo-docker``
+4. Acesse o navegador pelo link:
+   ``http://localhost:80``
 
 ### 6. Docker Hub
 
