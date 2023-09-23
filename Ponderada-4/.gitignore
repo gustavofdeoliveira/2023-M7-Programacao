@@ -1,0 +1,9 @@
+# Python virtual environment
+__pycache__/
+*.pyc
+*.pyo
+pyvenv.cfg
+__pypackages__/
+Lib
+Include
+Scripts

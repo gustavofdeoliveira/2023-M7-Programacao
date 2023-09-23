@@ -1,0 +1,9 @@
+fastapi
+pydantic
+pandas
+numpy
+pycaret
+unidecode
+uvicorn
+Jinja2
+prisma
