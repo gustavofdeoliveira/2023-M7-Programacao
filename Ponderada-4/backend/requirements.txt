@@ -7,5 +7,5 @@ unidecode
 uvicorn
 Jinja2
 prisma
-pip install pyjwt
+pyjwt
 bcrypt
