@@ -12,7 +12,7 @@ Esse projeto tem como objetivo criar uma interface gráfica para o projeto Ponde
 6. FastAPI
 7. PostgreSQL
 8. Apache2
-9. 
+
 ## Ambiente de Produção
 
 ### Front-end
@@ -32,10 +32,12 @@ Ambos foram hospedados na mesma instância EC2 da AWS fo tipo `t3.micro`, com `1
 ## Deploy na AWS
 
 ## Servicos utilizados
+
 1. 1x EC2 - com front-end e back-end
 2. 1x RDS - com banco de dados PostgreSQL
 
 ## Endereço da aplicação
+
 `http://3.208.163.53/`
 
 ## Usuário Teste
@@ -46,6 +48,7 @@ Ambos foram hospedados na mesma instância EC2 da AWS fo tipo `t3.micro`, com `1
 **Mota:** o sistema possui a parte de criação de conta
 
 ## Como rodar o projeto
+
 1. Clone o repositório
 2. Crie um arquivo `.env` na pasta raiz do projeto e adicione as variáveis de ambiente
 3. Dentro da pasta raiz do projeto, execute o comando `docker compose up` para instalar as dependências do projeto.
@@ -65,6 +68,7 @@ Ambos foram hospedados na mesma instância EC2 da AWS fo tipo `t3.micro`, com `1
 
 1. Back-end: https://hub.docker.com/repository/docker/gustavofdeoliveira/p4-backend
 2. Front-end: https://hub.docker.com/repository/docker/gustavofdeoliveira/p4-frontend
+
 ## Video de demonstração
 
 [Acessar o Link](https://drive.google.com/file/d/1PCH2SKlDK0diCTLxITTfd0nb5eW_9jIz/view?usp=sharing)
