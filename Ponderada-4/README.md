@@ -1,5 +1,7 @@
 # Podenrada 4 - Intefacegráfica com Modelo
 
+Esse projeto tem como objetivo criar uma interface gráfica para o projeto Ponderada 4, com o modelo construido na Ponderada 3, com uma interface gráfica para facilitar a utilização do sistema e uma API para comunicação com o banco de dados. Além disso, o projeto foi hospedado na AWS para que possa ser acessado de qualquer lugar.
+
 ## Tecnologias utilizadas
 
 1. Python
@@ -9,10 +11,20 @@
 5. Docker
 6. FastAPI
 7. PostgreSQL
+8. Apache2
 
 ## Variaveis de Ambiente
 
 `DATABASE_URL="postgresql://admin123:admin123@ponderada-4.cbgyqrypqeeb.us-east-1.rds.amazonaws.com:5432/postgres" SECRET_KEY = 'iuy287e1by87oyn'`
+
+## Deploy na AWS
+
+## Servicos utilizados
+1. 1x EC2 - com front-end e back-end
+2. 1x RDS - com banco de dados PostgreSQL
+
+## Endereço da aplicação
+`http://3.208.163.53/`
 
 ## Usuário Teste
 
@@ -30,9 +42,16 @@
 
 ### Documentação Local
 
-1. A documentação da API está disponível em `http://localhost:80/docs`. Lá você pode testar as rotas e ver os modelos de dados por meio do Swagger.
+1. A documentação da API está disponível em `http://localhost:3000/docs`. Lá você pode testar as rotas e ver os modelos de dados por meio do Swagger.
 
 ### Documentação na AWS
-1. A documentação da API está disponível em `http://ec2-3-142-224-4.us-east-2.compute.amazonaws.com/docs`. Lá você pode testar as rotas e ver os modelos de dados por meio do Swagger.
 
+1. A documentação da API está disponível em `http://3.208.163.53:3000/docs`. Lá você pode testar as rotas e ver os modelos de dados por meio do Swagger.
+
+## DockerHub
+
+1. Back-end: https://hub.docker.com/repository/docker/gustavofdeoliveira/p4-backend
+2. Front-end: https://hub.docker.com/repository/docker/gustavofdeoliveira/p4-frontend
 ## Video de demonstração
+
+[Acessar o Link](https://drive.google.com/file/d/1PCH2SKlDK0diCTLxITTfd0nb5eW_9jIz/view?usp=sharing)
