@@ -19,9 +19,150 @@
   </head>
 
   <body class="bg-gray-50">
-    <!-- component -->
-    <!-- This is an example component -->
-    <div>
+    <div
+      id="modal"
+      class="fixed hidden left-0 top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-50 py-10"
+    >
+      <div
+        class="max-h-full w-full max-w-xl overflow-y-auto sm:rounded-2xl bg-white"
+      >
+        <div class="w-full">
+          <div class="m-8 my-20 max-w-[400px] mx-auto">
+            <div class="mb-8">
+              <form
+                class="bg-white justify-content-center"
+                id="prediction-form"
+              >
+                <h1 class="mb-4 text-3xl font-extrabold">New prediction</h1>
+                <p class="text-gray-600">
+                  Please fill in the form below to create a new prediction.
+                </p>
+
+                <div
+                  class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl"
+                >
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="subscribers"
+                    id="subscribers"
+                    placeholder="Subscribers"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="video_views"
+                    id="video_views"
+                    placeholder="Video views"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="category"
+                    id="category"
+                    placeholder="Category"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="uploads"
+                    id="uploads"
+                    placeholder="Uploads"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="country"
+                    id="country"
+                    placeholder="Country"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="channel_type"
+                    id="channel_type"
+                    placeholder="Channel type"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="video_views_rank"
+                    id="video_views_rank"
+                    placeholder="Video views rank"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="country_rank"
+                    id="country_rank"
+                    placeholder="Country rank"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="channel_type_rank"
+                    id="channel_type_rank"
+                    placeholder="Channel type rank" 
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="video_views_rank"
+                    id="video_views_last_30_days"
+                    placeholder="Video views last 30 days"
+                  />
+                </div>
+                <div class="flex mt-4 items-center border-2 py-2 px-3 rounded-2xl">
+                  <input
+                    class="pl-2 outline-none border-none"
+                    type="number"
+                    name="subscribers_last_30_days"
+                    id="subscribers_last_30_days"
+                    placeholder="Subscribers views last 30 days"
+                  />
+                </div>
+                <div id="result"> </div>
+                <div class="space-x-4 mt-4 flex">
+                  <button
+                    id="close-modal"
+                    class="p-3 bg-white border rounded-full text-black w-full font-semibold"
+                  >
+                    Close
+                  </button>
+                  <button
+                  id="submit-button"
+                    type="submit"
+                    class="p-3 bg-indigo-600 rounded-full text-white w-full font-semibold"
+                  >
+                    Submit
+                  </button>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
       <nav class="bg-white border-b border-gray-200 fixed z-30 w-full">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
@@ -67,63 +208,22 @@
                 />
                 <span class="self-center whitespace-nowrap">Windster</span>
               </a>
-              <form action="#" method="GET" class="hidden lg:block lg:pl-32">
-                <label for="topbar-search" class="sr-only">Search</label>
-                <div class="mt-1 relative lg:w-64">
-                  <div
-                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-                  >
-                    <svg
-                      class="w-5 h-5 text-gray-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <input
-                    type="text"
-                    name="email"
-                    id="topbar-search"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 p-2.5"
-                    placeholder="Search"
-                  />
-                </div>
-              </form>
             </div>
-            <div class="flex items-center">
+            <div class="hidden lg:flex items-center ml-10 space-x-3 w-100">
               <button
-                id="toggleSidebarMobileSearch"
-                type="button"
-                class="lg:hidden text-gray-500 hover:text-gray-900 hover:bg-gray-100 p-2 rounded-lg"
+                id="new-prediction"
+                class="block w-full bg-indigo-600 mt-4 px-4 py-2 rounded-2xl text-white font-semibold mb-2"
               >
-                <span class="sr-only">Search</span>
-                <svg
-                  class="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
+                New prediction
               </button>
             </div>
           </div>
         </div>
       </nav>
-      <div class="flex overflow-hidden bg-white pt-16">
+      <div class="flex overflow-hidden bg-white pt-20">
         <aside
           id="sidebar"
-          class="fixed hidden z-20 h-full top-0 left-0 pt-16 flex lg:flex flex-shrink-0 flex-col w-64 transition-width duration-75"
+          class="fixed hidden z-20 h-full top-0 left-0 pt-20 flex lg:flex flex-shrink-0 flex-col w-64 transition-width duration-75"
           aria-label="Sidebar"
         >
           <div
@@ -153,6 +253,7 @@
                   </li>
                   <li>
                     <a
+                      id="logout"
                       href="#"
                       class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group"
                     >
@@ -168,9 +269,7 @@
                           clip-rule="evenodd"
                         ></path>
                       </svg>
-                      <span class="ml-3 flex-1 whitespace-nowrap" id="logout"
-                        >Log out</span
-                      >
+                      <span class="ml-3 flex-1 whitespace-nowrap">Log out</span>
                     </a>
                   </li>
                 </ul>
@@ -198,10 +297,10 @@
                     <div class="flex-shrink-0">
                       <span
                         class="text-2xl sm:text-3xl leading-none font-bold text-gray-900"
-                        >$45,385</span
+                        >Predictions</span
                       >
                       <h3 class="text-base font-normal text-gray-500">
-                        Sales this week
+                        Number of prediction per day
                       </h3>
                     </div>
                   </div>
@@ -286,8 +385,6 @@
       </div>
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
     </div>
   </body>
   <script src="../js/dashboard.js"></script>
