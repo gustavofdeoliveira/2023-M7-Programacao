@@ -15,7 +15,7 @@ if (document.getElementById("login-form")) {
       submitButton.innerHTML = "Loading...";
 
       // Send the message to the server using Fetch
-      fetch("http://localhost:3000/user/login", {
+      fetch("http://54.175.176.57:3000/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,7 +27,7 @@ if (document.getElementById("login-form")) {
             tokenJson = await response.json();
             // Message sent successfully, you can handle the response here
             localStorage.setItem("token", tokenJson.token); // Clear the input field
-            window.location.href = "http://localhost:80/pages/dashboard.html";
+            window.location.href = "http://54.175.176.57:80/pages/dashboard.html";
           } else {
             throw new Error("Failed to send message");
           }
@@ -62,7 +62,7 @@ if (document.getElementById("account-form")) {
       submitButton.innerHTML = "Loading...";
 
       // Send the message to the server using Fetch
-      fetch("http://localhost:3000/user/create", {
+      fetch("http://54.175.176.57:3000/user/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ if (document.getElementById("account-form")) {
       })
         .then(async (response) => {
           if (response.ok) {
-            window.location.href = "http://localhost:80";
+            window.location.href = "http://54.175.176.57:80";
           } else {
             throw new Error("Failed to send message");
           }

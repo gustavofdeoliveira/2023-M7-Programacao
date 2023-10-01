@@ -9,6 +9,10 @@
 6. FastAPI
 7. PostgreSQL
 
+## Variaveis de Ambiente
+`DATABASE_URL="postgresql://admin123:admin123@ponderada-4.cbgyqrypqeeb.us-east-1.rds.amazonaws.com:5432/postgres"
+SECRET_KEY = 'iuy287e1by87oyn'`
+
 ## Usuário Teste
 
 - Email: teste@teste.com

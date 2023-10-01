@@ -1,12 +1,12 @@
 window.addEventListener("load", function () {
   if (!localStorage.getItem("token")) {
-    window.location.href = "http://localhost:80/";
+    window.location.href = "http://54.175.176.57:80/";
   }
   if (localStorage.getItem("token")) {
 
     const token = localStorage.getItem("token");
     // Send the message to the server using Fetch
-    fetch("http://localhost:3000/user/all", {
+    fetch("http://54.175.176.57:3000/user/all", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
       })
       .finally(() => {});
 
-    fetch("http://localhost:3000/prediction/all", {
+    fetch("http://54.175.176.57:3000/prediction/all", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
