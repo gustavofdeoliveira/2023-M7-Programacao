@@ -1,11 +1,11 @@
 window.addEventListener("load", function () {
   if (!localStorage.getItem("token")) {
-    window.location.href = "http://54.145.7.217:80/";
+    window.location.href = "http://3.208.163.53:80/";
   }
   if (localStorage.getItem("token")) {
     const token = localStorage.getItem("token");
     // Send the message to the server using Fetch
-    fetch("http://54.145.7.217:3000/user/all", {
+    fetch("http://3.208.163.53:3000/user/all", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
       })
       .finally(() => {});
 
-    fetch("http://54.145.7.217:3000/prediction/all", {
+    fetch("http://3.208.163.53:3000/prediction/all", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -103,7 +103,7 @@ window.addEventListener("load", function () {
       e.preventDefault(); // Prevent the default form submission behavior
       debugger;
       localStorage.removeItem("token");
-      window.location.href = "http://54.145.7.217:80/";
+      window.location.href = "http://3.208.163.53:80/";
     });
 
     document
@@ -177,7 +177,7 @@ window.addEventListener("load", function () {
           user_id != ""
         ) {
           // Send the message to the server using Fetch
-          fetch("http://54.145.7.217:3000/prediction/predict", {
+          fetch("http://3.208.163.53:3000/prediction/predict", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
