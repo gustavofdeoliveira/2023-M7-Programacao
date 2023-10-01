@@ -21,16 +21,5 @@ app.add_middleware(
 app.include_router(user_router, prefix="/user", tags=["User"])
 app.include_router(prediction_router, prefix="/prediction", tags=["Prediction"])
 
-app.mount("/js", StaticFiles(directory="../frontend/js"), name="js")
-app.mount("/pages", StaticFiles(directory="../frontend/pages"), name="pages")
-app.mount("/css", StaticFiles(directory="../frontend/css"), name="css")
-
-@app.get("/", response_class=HTMLResponse)
-async def read_root(request: Request):
-    try:
-        return templates.TemplateResponse("index.html", {"request": request})
-    except Exception as e:
-        print(f"Exceção: {str(e)}")
-
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=3000)

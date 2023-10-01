@@ -3,6 +3,9 @@ import bcrypt
 from fastapi import HTTPException
 import jwt
 from model.userModel import create_user, get_user_by_email, get_user_by_id, get_all_user
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Class User
 class User:
@@ -34,7 +37,7 @@ class User:
                 if bcrypt.checkpw(password=str(password).encode('UTF_8'),
                                   hashed_password=str(user.password).encode('UTF_8')):
                     payload_data = {'id': user.id, "exp": datetime.utcnow() + timedelta(hours=2)}
-                    secret_key = 'iuy287e1by87oyn'
+                    secret_key = os.getenv("SECRET_KEY")
                     token = jwt.encode(payload=payload_data, key=secret_key, algorithm='HS256')
 
                     return  {"token":str(token)}, 200

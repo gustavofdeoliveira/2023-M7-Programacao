@@ -39,7 +39,7 @@ async def get_user_by_email(email: str) -> Prisma.user:
 
 
 # This function gets all the users in the database and returns a list of users.
-async def get_user_by_id(id: str) -> dict[str, str]:
+async def get_user_by_id(id: str) -> dict:
     prisma = Prisma()
     await prisma.connect()
     user = await prisma.user.find_first(where={'id': id})
