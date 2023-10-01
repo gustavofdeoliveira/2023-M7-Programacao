@@ -18,7 +18,7 @@ class User:
         self.password = password
 
     # This function registers a user with the provided details and returns a user.
-    async def register(self )-> dict[str, str]:
+    async def register(self):
         try:
             password = str(self.password)
             password = password.encode('UTF_8')
@@ -30,7 +30,7 @@ class User:
         except Exception as e:
             raise HTTPException(status_code=400, detail=str(e))
     
-    async def login(email:str, password: str) -> tuple[str, str]:
+    async def login(email:str, password: str):
         try:
             user = await get_user_by_email(email=email)
             if user:
@@ -49,10 +49,10 @@ class User:
             raise HTTPException(status_code=400, detail=str(e))
 
     # This function gets the user with the provided id and returns a user.
-    def get_user(self, id: str) -> dict[str, str]:
+    def get_user(self, id: str):
         user = get_user_by_id(id=id)
         return user
 
-    async def get_all() -> dict[str, str]:
+    async def get_all():
         numer_users = await get_all_user()
         return {"number_users":str(numer_users)}, 200

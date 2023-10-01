@@ -27,7 +27,7 @@ if (document.getElementById("login-form")) {
             tokenJson = await response.json();
             // Message sent successfully, you can handle the response here
             localStorage.setItem("token", tokenJson.token); // Clear the input field
-            window.location.href = "http://localhost:3000/pages/dashboard.html";
+            window.location.href = "http://localhost:80/pages/dashboard.html";
           } else {
             throw new Error("Failed to send message");
           }
@@ -71,7 +71,7 @@ if (document.getElementById("account-form")) {
       })
         .then(async (response) => {
           if (response.ok) {
-            window.location.href = "http://localhost:3000";
+            window.location.href = "http://localhost:80";
           } else {
             throw new Error("Failed to send message");
           }

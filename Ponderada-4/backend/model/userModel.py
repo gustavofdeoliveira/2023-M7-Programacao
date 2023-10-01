@@ -49,7 +49,7 @@ async def get_user_by_id(id: str) -> dict:
         return user.__dict__
     raise Exception(f"User does not exists with the id: {id}")
 
-async def get_all_user() -> str:
+async def get_all_user():
     prisma = Prisma()
     await prisma.connect()
     users = await prisma.user.find_many()

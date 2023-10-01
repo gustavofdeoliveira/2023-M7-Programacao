@@ -1,14 +1,11 @@
 import uvicorn
 from fastapi import FastAPI, Request
-from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from routes.userRoutes import user_router
 from routes.predictionRoutes import prediction_router
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
-templates = Jinja2Templates(directory="../frontend")
 
 app.add_middleware(
     CORSMiddleware,

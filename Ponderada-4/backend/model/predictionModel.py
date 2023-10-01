@@ -19,7 +19,7 @@ async def create_prediction(prediction: float, userId: int) -> Prisma.prediction
 
 
 # This function gets all the users in the database and returns a list of users.
-async def get_predictions() -> list[Prisma.prediction]:
+async def get_predictions():
     prisma = Prisma()
     await prisma.connect()
     data_predictions = await prisma.prediction.find_many()

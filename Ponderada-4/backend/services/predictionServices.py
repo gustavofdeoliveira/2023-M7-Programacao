@@ -5,7 +5,7 @@ import json
 class Prediction:
 
     # This function registers a user with the provided details and returns a user.
-    async def register(prediction: float, userId: int) -> dict[str, str]:
+    async def register(prediction: float, userId: int):
         try:
             response = await create_prediction(prediction=prediction, userId=userId)
             return response.__dict__, 200

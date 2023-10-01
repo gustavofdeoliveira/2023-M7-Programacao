@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   if (!localStorage.getItem("token")) {
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "http://localhost:80/";
   }
   if (localStorage.getItem("token")) {
 

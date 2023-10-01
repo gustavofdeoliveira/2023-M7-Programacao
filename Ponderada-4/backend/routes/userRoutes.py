@@ -2,9 +2,6 @@ from services.userSevices import User
 from fastapi import APIRouter, HTTPException, Depends, FastAPI, Header
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-import os
-from dotenv import load_dotenv
-load_dotenv()
 
 user_router = APIRouter()
 
@@ -41,15 +38,6 @@ async def login_handler(data: UserLogin):
 def validate_token(Authorization: str = Header(None)):
     # Aqui você pode adicionar sua lógica de validação de token
     if not Authorization:
-        raise HTTPException(status_code=401, detail="Token inválido")
-
-    try:
-        secret_key = os.getenv("SECRET_KEY")
-        payload = jwt.decode(Authorization, secret_key, algorithms=[ALGORITHM])
-        return payload
-    except jwt.ExpiredSignatureError:
-        raise HTTPException(status_code=401, detail="Token expirado")
-    except jwt.DecodeError:
         raise HTTPException(status_code=401, detail="Token inválido")
 
 
