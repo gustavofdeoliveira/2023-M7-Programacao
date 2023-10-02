@@ -1,3 +1,15 @@
+- [Resenha - Artigo: Machine learning for internet of things data analysis: a survey](#resenha---artigo-machine-learning-for-internet-of-things-data-analysis-a-survey)
+  - [Intodução](#intodução)
+  - [Revisão Literaria](#revisão-literaria)
+  - [Internet of Things (IoT)](#internet-of-things-iot)
+  - [Smart City](#smart-city)
+  - [Taxonomy of machine learning algorithms](#taxonomy-of-machine-learning-algorithms)
+    - [K-Nearest Neighbors (KNN)](#k-nearest-neighbors-knn)
+    - [Naive Bayes](#naive-bayes)
+    - [Random Forest](#random-forest)
+    - [K-Means](#k-means)
+  - [Conclusão](#conclusão)
+
 # Resenha - Artigo: Machine learning for internet of things data analysis: a survey
 
 ## Intodução 
@@ -55,7 +67,7 @@ O modelo KNN, é um modelo de aprendizado de máquina supervisionado, que pode s
 
 Tanto a parte da programação quanto matemática, foi algo que foi abordado no projeto, o que é importante para ajudar a entender como o modelo funciona. E com isso, o autor cita a seguinte equação:
 
-<p class="cente">
+<p align="center">
 <img src="image/README/1696209957875.png">
 </p>
 
@@ -67,7 +79,7 @@ O modelo Naive Bayes, é um modelo de aprendizado de máquina supervisionado, qu
 
 No texto, o autor cita a seguinte equação:
 
-<p class="cente">
+<p align="center">
 <img src="image/README/1696210080653.png">
 </p>
 
