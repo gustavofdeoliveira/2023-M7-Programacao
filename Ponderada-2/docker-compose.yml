@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+    image: gustavofdeoliveira/backend-to-do-list
+    restart: always
+    ports:
+      - "3001:3001"
+    depends_on:
+      - postgres
+
+  frontend:
+    build: 
+      context: ./frontend
+    image: gustavofdeoliveira/frontend-to-do-list
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    
+volumes:
+  postgres:
